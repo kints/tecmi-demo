@@ -1,0 +1,90 @@
+<div class="modal fade" id="NuevaVenta" tabindex="-1" aria-labelledby="NuevaVentaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="NuevaVentaLabel">Nueva venta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="vendedorID" class="col-form-label">Vendedor ID:</label>
+            <input type="text" class="form-control" id="vendedorID">
+          </div>
+          <div class="mb-3">
+            <label for="clienteID" class="col-form-label">Cliente ID:</label>
+            <input type="text" class="form-control" id="clienteID"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="formaPagoID" class="col-form-label">Forma de pago:</label>
+            <input type="text" class="form-control" id="formaPagoID"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="AutoparteID" class="col-form-label">Autoparte:</label>
+            <input type="text" class="form-control" id="AutoparteID"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="formaEntregaID" class="col-form-label">Forma de entrega:</label>
+            <input type="text" class="form-control" id="formaEntregaID"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-sm-4"><img class="img-thumbnail w-25" src="./assets/img/AutoParts.png"
+        alt="Las mejores autopartes las encuentras aquí" srcset=""></div>
+    <div class="col col-sm-8">
+      <h1>Refacciones AutoParts</h1>
+      <h2>Sistema de administración</h2>
+      <h3>Reporte de ventas</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <input type="text" id="buscarInputVendedorID" placeholder="Buscar por vendedor..." title="Buscar por vendedor">
+      <input type="text" id="buscarInputCiudadID" placeholder="Buscar por ciudad sucursal..." title="Buscar por ciudad">
+      <input type="text" id="buscarInputClienteID" placeholder="Buscar por cliente..." title="Buscar por cliente">
+      <input type="text" id="buscarInputAutoparteID" placeholder="Buscar por autoparte..." title="Buscar por autoparte">
+
+      <button type="button" class="btn btn-primary float-end m-1" data-bs-toggle="modal" data-bs-target="#NuevaVenta"
+        data-bs-whatever="">Nueva venta</button>
+      <button type="button" class="btn btn-primary float-end m-1" id="verDashboard">Ver Dashboard</button>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col h-25">
+      <table class="table table-striped table-hover table-bordered table-sm overflow-scroll" id="tablaID">
+        <thead class="table-dark align-middle">
+          <th scope="col">Vendedor ID</th>
+          <th>Nombre Vendedor</th>
+          <th>Fecha Venta</th>
+          <th>Hora Venta</th>
+          <th>Ciudad Sucursal</th>
+          <th>Sucursal</th>
+          <th>Monto Venta</th>
+          <th>Forma Pago</th>
+          <th>Cliente ID</th>
+          <th>Nombre Cliente</th>
+          <th>Descripcion Venta</th>
+          <th>Autoparte</th>
+          <th>Forma Entrega</th>
+          <th>Fecha Entrega</th>
+          <th>Ciudad Cliente</th>
+        </thead>
+        <tbody id="dataTabla">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/scripts/modal.js"></script>
